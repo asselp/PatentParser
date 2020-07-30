@@ -6,9 +6,11 @@ from lxml.html import fromstring
 from src.conf import HEADERS, KP_MAIN
 from src.models import Patent
 
+r = 'aidana'
+q = 34
+
 
 class KazPatentCrawler:
-    """What does this class do?"""
 
     def __init__(self):
         self.headers = HEADERS
@@ -76,4 +78,3 @@ if __name__ == '__main__':
     patents = crawler.get_patents()
     for patent in patents:
         print(patent.dict())
-
