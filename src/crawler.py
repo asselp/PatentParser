@@ -131,5 +131,4 @@ class KazPatentCrawler:
 
 if __name__ == '__main__':
     crawler = KazPatentCrawler(40)
-
-    print(crawler.get_patents())
+    crawler.get_patents()
