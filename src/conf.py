@@ -29,3 +29,4 @@ SCROLL_HEADERS = {
 }
 PARAMS = {'$$ajaxid': ''}
 KP_AJAX = 'https://copyright.kazpatent.kz/xpd/xpd.nsf/xpd.xsp'
+ENGINE = "postgresql://postgres:1234@localhost/postgres"

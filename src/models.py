@@ -2,6 +2,7 @@ from pydantic import BaseModel
 
 
 class Patent(BaseModel):
+
     id: str
     registration_date: str
     receipt_date: str

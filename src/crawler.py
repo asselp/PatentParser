@@ -6,6 +6,7 @@ from lxml.html import fromstring
 from src.utils import get_logger
 from src.conf import HEADERS, KP_MAIN, SCROLL_HEADERS, PARAMS, KP_AJAX
 from src.models import Patent
+from src.db import Saver
 
 
 class KazPatentCrawler:
@@ -131,4 +132,7 @@ class KazPatentCrawler:
 
 if __name__ == '__main__':
     crawler = KazPatentCrawler(40)
-    crawler.get_patents()
+    records = crawler.get_patents()
+    saver = Saver()
+    for record in records:
+        saver.save_patents(record)
